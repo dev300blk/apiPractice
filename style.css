@@ -19,13 +19,14 @@ main{
 }
 
 .container{
-    /* border: solid black .5px; */
+    border: solid rgb(245, 232, 232) .1px;
     background-color: rgb(207, 218, 207);
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(10, 1fr);
     grid-area: 2/3/4/4;
     border-radius: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 form{
