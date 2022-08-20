@@ -16,11 +16,17 @@ main{
     display: grid;
     grid-template-columns: 1fr 1fr  2fr 1fr 1fr;
     grid-template-rows: repeat(4, 1fr);
+    background-image: url("assets/angryStorm.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container{
-    border: solid rgb(245, 232, 232) .1px;
-    background-color: rgb(207, 218, 207);
+    color: whitesmoke;
+    border: solid rgb(24, 23, 23) .1px;
+    background-color: black;
+    opacity: .5;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(10, 1fr);
@@ -40,6 +46,7 @@ input{
     line-height: 1.5rem;
     border: none;
     border-radius: .4rem;
+    background-color: lightslategray;
 }
 .data-display{
     display:grid;
