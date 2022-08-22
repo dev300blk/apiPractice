@@ -1,20 +1,28 @@
-let endPoint = 'http://jsonplaceholder.typicode.com/users';
 
-const getData = (endPoint)=>{
+
+const getData = (callBack)=>{
 const request = new XMLHttpRequest();
 request.addEventListener('readystatechange',()=>{
 if (request.readyState === 4 && request.status === 200){
-    console.log(request.responseText);
+   callBack(undefined, request.responseText);
 } else if(request.readyState === 4){
-    console.log('error, could not retieve data');
+    callBack('could not fetch data', undefined);
 }
 });
 
 
-request.open('GET', endPoint)
+request.open('GET','test.json');
 request.send();
 }
 
 
-getData(endPoint);
+getData((err,data)=>{
+    if(err){
+        console.log(err);
+    } else if(data){
+        console.log(data);
+        const obj = JSON.parse(data);
+        console.log(obj);
+    }
+});
 
