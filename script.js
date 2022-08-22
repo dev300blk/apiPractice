@@ -1,4 +1,4 @@
-
+const test = 0;
 
 const getData = (callBack)=>{
 const request = new XMLHttpRequest();
